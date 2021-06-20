@@ -18,7 +18,8 @@ ability to accept a wide variety of white-space, the white-space
 can be jockied to create benign ASM opcodes that do nothing of
 consequence.  Additionally, the PGM file parses its data and
 ignores any subsequent garbage at the end, allowing the actual
-ASM code to follow.
+ASM code to follow.  Furthermore, the `.com` file format doesn't
+require any ELF-like header, simplifying what it can overlap with.
 
 Thus the entire ASM program is actual assembly (well, except
 for the actual `DB` for the "2"+CR+LF+"$" at the end to print
